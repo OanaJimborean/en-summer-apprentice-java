@@ -9,4 +9,6 @@ import java.util.Map;
 public interface OrderService {
     List<Orders> getOrders();
     Orders addOrder(Orders order);
+
+    List<Orders> getOrderByID(Integer customerID);
 }
