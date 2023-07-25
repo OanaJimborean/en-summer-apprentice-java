@@ -3,17 +3,13 @@ package com.java.project.endava.EndavaProject.controller;
 import com.java.project.endava.EndavaProject.dto.OrderDTO;
 import com.java.project.endava.EndavaProject.model.Orders;
 import com.java.project.endava.EndavaProject.model.TicketCategory;
-import com.java.project.endava.EndavaProject.repository.OrderRepository;
-import com.java.project.endava.EndavaProject.service.TicketCategoryService;
 import com.java.project.endava.EndavaProject.serviceImpl.OrderServiceImpl;
 import com.java.project.endava.EndavaProject.serviceImpl.TicketCategoryServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 @RequestMapping(path = "/orders")

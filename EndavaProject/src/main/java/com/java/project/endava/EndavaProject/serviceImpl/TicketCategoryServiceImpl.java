@@ -6,6 +6,8 @@ import com.java.project.endava.EndavaProject.service.TicketCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TicketCategoryServiceImpl implements TicketCategoryService {
 
@@ -18,5 +20,10 @@ public class TicketCategoryServiceImpl implements TicketCategoryService {
 
     public TicketCategory getTicketCategoryById(Integer id){
         return ticketCategoryRepository.findTicketCategoryByTicketCategoryID(id);
+    }
+
+    @Override
+    public List<TicketCategory> getTicketCategories() {
+        return ticketCategoryRepository.findAll();
     }
 }

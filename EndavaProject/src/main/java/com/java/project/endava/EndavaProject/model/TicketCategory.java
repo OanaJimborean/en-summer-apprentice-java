@@ -1,5 +1,6 @@
 package com.java.project.endava.EndavaProject.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -16,7 +17,8 @@ public class TicketCategory implements Serializable {
     private Integer ticketCategoryID;
 
     @ManyToOne
-    @JoinColumn(name = "EventID", referencedColumnName = "EventID")
+    @JoinColumn(name = "EventID")
+    @JsonManagedReference
     private Event eventID;
 
     @Column(name = "Description")
@@ -24,6 +26,8 @@ public class TicketCategory implements Serializable {
 
     @Column(name = "Price")
     private Float price;
+
+
 
 
 }

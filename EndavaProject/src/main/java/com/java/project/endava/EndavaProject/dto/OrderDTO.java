@@ -1,8 +1,6 @@
 package com.java.project.endava.EndavaProject.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.java.project.endava.EndavaProject.model.Customer;
-import com.java.project.endava.EndavaProject.model.TicketCategory;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -24,7 +22,6 @@ public class OrderDTO {
         this.eventID = eventID;
 
     }
-
 
     public OrderDTO() {
 

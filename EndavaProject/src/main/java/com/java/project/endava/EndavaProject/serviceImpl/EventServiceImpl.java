@@ -1,5 +1,7 @@
 package com.java.project.endava.EndavaProject.serviceImpl;
 
+import com.java.project.endava.EndavaProject.dto.EventDTO;
+import com.java.project.endava.EndavaProject.mapper.EventMapper;
 import com.java.project.endava.EndavaProject.model.Event;
 import com.java.project.endava.EndavaProject.model.EventType;
 import com.java.project.endava.EndavaProject.model.Venue;
@@ -21,7 +23,8 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public List<Event> getEventByVenueIDAndEventType(Integer venueID, String eventType) {
-        return eventRepository.findEventsByVenueID_VenueIDAndEventTypeID_EventTypeName(venueID,eventType);
+        List<Event> events = eventRepository.findEventsByVenueID_VenueIDAndEventTypeID_EventTypeName(venueID, eventType);
+        return events;
     }
 
 

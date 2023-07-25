@@ -1,6 +1,4 @@
 package com.java.project.endava.EndavaProject.serviceImpl;
-
-import com.java.project.endava.EndavaProject.dao.OrderDAO;
 import com.java.project.endava.EndavaProject.dto.OrderDTO;
 import com.java.project.endava.EndavaProject.model.Customer;
 import com.java.project.endava.EndavaProject.model.Orders;
@@ -12,15 +10,12 @@ import com.java.project.endava.EndavaProject.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
 public class OrderServiceImpl implements OrderService {
     @Autowired
     private OrderRepository orderRepository;
-    @Autowired
-    OrderDAO orderDAO;
 
     @Autowired
     TicketCategoryRepository ticketCategoryRepository;

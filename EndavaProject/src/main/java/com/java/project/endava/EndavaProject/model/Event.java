@@ -1,25 +1,28 @@
 package com.java.project.endava.EndavaProject.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 @Data
 @Entity
 @NoArgsConstructor
 @Table(name = "event")
 
-
 public class Event implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "EventID")
     private Integer eventID;
+
+    @OneToMany(mappedBy = "eventID")
+    @JsonManagedReference
+    private List<TicketCategory> ticketCategoryList;
 
     @ManyToOne
     @JoinColumn(name = "VenueID", referencedColumnName = "VenueID")
@@ -40,4 +43,6 @@ public class Event implements Serializable {
 
     @Column(name = "EndDate")
     private LocalDateTime endDate;
+
+
 }

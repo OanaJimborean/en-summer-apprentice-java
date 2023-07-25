@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 @Table(name = "orders")
-//@NamedQuery(name = "Orders.getOrderByCustomerId", query = "select new com.java.project.endava.EndavaProject.dto.OrderDTO(o.id, o.customerID,o.totalPrice) from Orders o where o.id=:id")
 public class Orders implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -2,8 +2,6 @@ package com.java.project.endava.EndavaProject.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
 
 import java.io.Serializable;
 
